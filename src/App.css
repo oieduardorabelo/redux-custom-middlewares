@@ -1,0 +1,11 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.UserCard {
+  border: 1px solid #EEE;
+  margin: 20px;
+  padding: 20px;
+}

@@ -9,7 +9,11 @@ import AsyncMiddleware from './middlewares/async'
 import App from './App';
 
 const createStoreWithMiddlewares = applyMiddleware(AsyncMiddleware)(createStore)
-const store = createStoreWithMiddlewares(rootReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+const store = createStoreWithMiddlewares(
+  rootReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 ReactDOM.render(
   <Provider store={store}>

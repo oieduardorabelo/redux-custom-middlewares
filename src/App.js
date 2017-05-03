@@ -1,8 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import './App.css'
+import { connect } from 'react-redux';
+import './App.css';
 
-import * as usersActions from './actions/usersActions'
+import * as usersActions from './actions/usersActions';
 
 class App extends React.Component {
   componentDidMount() {
@@ -16,18 +16,18 @@ class App extends React.Component {
         <p>{user.company.name}</p>
         <a href={`//${user.website}`}>{user.website}</a>
       </div>
-    )
+    );
   }
 
   render() {
-    return <div>{this.props.users.map(this.renderUser)}</div>
+    return <div>{this.props.users.map(this.renderUser)}</div>;
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    users: state.users
-  }
-}
+    users: state.users,
+  };
+};
 
-export default connect(mapStateToProps, usersActions)(App)
+export default connect(mapStateToProps, usersActions)(App);
